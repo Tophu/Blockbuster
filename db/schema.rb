@@ -15,6 +15,18 @@ ActiveRecord::Schema.define(version: 2019_07_08_151917) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "movies", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.integer "year"
+    t.bigint "review_id"
+    t.integer "price"
+    t.string "genre"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_movies_on_review_id"
+  end
+
   create_table "orders", force: :cascade do |t|
     t.integer "content_id"
     t.string "rent_date_start"
