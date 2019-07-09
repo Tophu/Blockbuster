@@ -7,16 +7,11 @@ class OrdersController < ApplicationController
   end
 
   def show
+    @orders = Order.all
     @order = current_order.find(params[:id])
   end
 
   def new
     @orders = Order.new
-  end
-
-  def edit
-  end
-
-  def destroy
   end
 end
