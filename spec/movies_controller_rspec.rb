@@ -4,7 +4,7 @@ require_relative 'movies_controller_rspec'
 
 context 'index' do 
   it 'Should display index of movies' do
-    expect(index(movies)).to include(Movies.all)
+    expect(index(@movies)).to include(Movie.all)
   end
 end
 
