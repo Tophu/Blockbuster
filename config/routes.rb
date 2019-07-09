@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'movies/index'
+  get 'movies/show'
   get 'orders/reviews'
   get 'orders/movies'
   devise_for :users
