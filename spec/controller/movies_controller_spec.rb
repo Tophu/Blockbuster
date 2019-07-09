@@ -1,5 +1,5 @@
 require 'rspec'
-require_relative 'movies_controller_rspec'
+require_relative 'movies_controller_spec'
 # require 'movies_controller'
 # require '../spec/movies_controller_rspec'
 # require '../app/controllers/movies_controller.rb'
