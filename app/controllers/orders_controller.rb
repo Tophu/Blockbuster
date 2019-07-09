@@ -1,7 +1,16 @@
 class OrdersController < ApplicationController
-  def reviews
+  def index
   end
 
-  def movies
+  def show
+  end
+
+  def new
+  end
+
+  def edit
+  end
+
+  def destroy
   end
 end

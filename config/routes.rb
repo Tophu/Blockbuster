@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'orders/index'
+  get 'orders/show'
+  get 'orders/new'
+  get 'orders/edit'
+  get 'orders/destroy'
+  get 'order/index'
+  get 'order/show'
+  get 'order/new'
+  get 'order/edit'
+  get 'order/destroy'
+  get 'order/index'
+  get 'order/show'
+  get 'order/new'
+  get 'order/edit'
   get 'orders/reviews'
   get 'orders/movies'
   devise_for :users
