@@ -1,13 +1,28 @@
 require 'test_helper'
 
 class OrdersControllerTest < ActionDispatch::IntegrationTest
-  test "should get reviews" do
-    get orders_reviews_url
+  test "should get index" do
+    get orders_index_url
     assert_response :success
   end
 
-  test "should get movies" do
-    get orders_movies_url
+  test "should get show" do
+    get orders_show_url
+    assert_response :success
+  end
+
+  test "should get new" do
+    get orders_new_url
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get orders_edit_url
+    assert_response :success
+  end
+
+  test "should get destroy" do
+    get orders_destroy_url
     assert_response :success
   end
 
