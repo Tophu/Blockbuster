@@ -1,4 +1,4 @@
-class Movie <
+class Movie < ApplicationRecord
   belongs_to :user, class_name: :Order, foreign_key: 'movie_id'
   has_many :reviews
   # monetize :price_cents

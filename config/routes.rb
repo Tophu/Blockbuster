@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get "orders/index"
-  get "orders/show"
-  get "orders/new"
-  get "orders/edit"
-  get "orders/destroy"
+  get "order/index"
+  get "order/show"
+  get "order/new"
+  post "order/create"
+  get "order/edit"
+  get "order/destroy"
   get "orders/reviews"
   get "orders/movies"
-
   get "movies/index"
   get "movies/show"
 
