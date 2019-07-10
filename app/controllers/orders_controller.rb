@@ -1,7 +1,17 @@
 class OrdersController < ApplicationController
-  def reviews
+  def initialize
   end
 
-  def movies
+  def index
+    @orders = Order.all
+  end
+
+  def show
+    @orders = Order.all
+    @order = current_order.find(params[:id])
+  end
+
+  def new
+    @orders = Order.new
   end
 end
