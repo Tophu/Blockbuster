@@ -31,7 +31,7 @@ gem 'web-console', '>= 3.3.0'
 end
 
 group :development, :test do
-<<<<<<< HEAD
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
@@ -39,13 +39,5 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
   gem 'r_spec'
-=======
-gem 'pry-byebug'
-gem 'pry-rails'
-gem 'listen', '~> 3.0.5'
-gem 'spring'
-gem 'spring-watcher-listen', '~> 2.0.0'
-gem 'dotenv-rails'
-gem 'r_spec'
->>>>>>> 4cde0be1848774abf7b6548e12dddd8f702c7ca5
+
 end
