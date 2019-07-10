@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'baskets/show'
+  get 'baskets/create'
+  get 'baskets/new'
+  get 'payments/create'
   get "orders/index"
   get "orders/show"
   get "orders/new"
