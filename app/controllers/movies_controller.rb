@@ -1,8 +1,8 @@
 class MoviesController < ApplicationController
 
-  def initialize
-    @movies = movies
-  end
+  # def initialize
+  #   @movies = movies
+  # end
 
   def index
     @movies = Movie.all
