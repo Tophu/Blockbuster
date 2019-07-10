@@ -1,4 +1,4 @@
-class Movie < 
+class Movie <
   belongs_to :user, class_name: :Order, foreign_key: 'movie_id'
   has_many :reviews
   # monetize :price_cents
@@ -8,5 +8,5 @@ include PgSearch
          against: [:title, :year],
          using: {
           tsearch: { prefix: true }
-         }
+}
 end
