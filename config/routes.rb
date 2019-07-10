@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   get 'baskets/show'
   get 'baskets/create'
   get 'baskets/new'
@@ -8,9 +9,16 @@ Rails.application.routes.draw do
   get "orders/new"
   get "orders/edit"
   get "orders/destroy"
+=======
+  get "order/index"
+  get "order/show"
+  get "order/new"
+  post "order/create"
+  get "order/edit"
+  get "order/destroy"
+>>>>>>> 4cde0be1848774abf7b6548e12dddd8f702c7ca5
   get "orders/reviews"
   get "orders/movies"
-
   get "movies/index"
   get "movies/show"
 
