@@ -1,7 +1,8 @@
 require 'test_helper'
 
 class ReviewTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
+  # test "should save review with a user_id" do
+  #   review = Review.new
+  #   assert_not review.save, "Saved the review with a user_id"
   # end
 end
