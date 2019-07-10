@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get "order/index"
   get "order/show"
   get "order/new"
+  post "order/create"
   get "order/edit"
   get "order/destroy"
   get "orders/reviews"
