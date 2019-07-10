@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   get "order/destroy"
   get "orders/reviews"
   get "orders/movies"
-  get 'movies/index'
-  get 'movies/show'
+  get "movies/index"
+  get "movies/show"
 
   devise_for :users
   root to: "pages#home"
