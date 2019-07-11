@@ -12,9 +12,21 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(movies_params)
+    @movie = Movie.create(movie_params)
     if @movie.save!
-      redirect_to index_path(@Movie.all)
+      redirect_to movies_path
     end
+  end
+
+  def destroy
+    @movie = Movie.find(params[:id])
+    @Movie.destroy
+    redirect_to movies_path
+  end
+
+  private
+
+  def movie_params
+    params.require(:movie).permit(:title, :price)
   end
 end
