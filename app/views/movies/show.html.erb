@@ -1,2 +1,8 @@
 <h1>Movie:</h1>
- <strong><%=movie.find(params[:id])%></strong>
+<h2><%= @movie.title%></h2>
+<p><%= @movie.description%></p>
+<p><%= @movie.genre%></p>
+<p>
+    <strong>Price:</strong>
+    <%= number_to_currency @movie.price%>
+    </p>
