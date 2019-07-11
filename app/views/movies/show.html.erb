@@ -1,2 +1,11 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1>Movie:</h1>
+<h2><%= @movie.title%></h2>
+<p><%= @movie.description%></p>
+<p><%= @movie.genre%></p>
+<p>
+    <strong>Price:</strong>
+    <%= number_to_currency @movie.price%>
+    </p>
+
+    <p>
+        <%= link_to 'Back to Show Page', movies_path %>

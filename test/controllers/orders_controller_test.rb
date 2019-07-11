@@ -16,14 +16,4 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get edit" do
-    get orders_edit_url
-    assert_response :success
-  end
-
-  test "should get destroy" do
-    get orders_destroy_url
-    assert_response :success
-  end
-
 end

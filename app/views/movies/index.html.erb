@@ -1,2 +1,17 @@
-<h1>Movies#index</h1>
-<p>Find me in app/views/movies/index.html.erb</p>
+<h1>All Movies</h1>
+
+<% @movies.each do |movie|%>
+<h2><%= movie.title%></h2>
+<p><%= movie.description%></p>
+<p><%= movie.genre%></p>
+<p>
+    <strong>Price:</strong>
+    <%= number_to_currency movie.price%>
+    </p>
+
+  <p>
+    <%= link_to "Edit", edit_movie_path(movie) %> |
+    <%= link_to "Delete", movie_path(movie), method: :delete, data: {confirm: "Are you sure?"} %>
+    <%= button_to "Add #{movie.title} to basket", items_path(:movie_id => movie.id) %>
+  </p>
+<% end%>
