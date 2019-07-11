@@ -9,4 +9,6 @@
 puts 'Starting seed'
 puts 'Generating Movie'
 Faker::Movie.quote
+Movie.create(title: "godzilla 2")
 puts 'Seed done'
+
