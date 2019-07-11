@@ -1,5 +1,6 @@
 class Movie < ApplicationRecord
-  validates :name, :price, presence: true
+  validates :description, presence: true
+  validates :title, :price, :genre, presence: true
   validates :price, numericality: true
-  validates :name, uniqueness: true
+  validates :title, uniqueness: true
 end
