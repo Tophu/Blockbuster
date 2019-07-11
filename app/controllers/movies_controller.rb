@@ -24,7 +24,11 @@ class MoviesController < ApplicationController
 
   private
 
-  def movie_params
-    params.require(:movie).permit(:title, :price)
+  def movies_params
+    params.require(:movie).permit(:title)
+  end
+
+  def find_movie
+    @movie = Movie.find(params[:id])
   end
 end

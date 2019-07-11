@@ -27,10 +27,11 @@ gem 'stripe'
 gem 'bootstrap'
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
+gem 'web-console', '>= 3.3.0'
 end
 
 group :development, :test do
+
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
@@ -38,4 +39,3 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
   gem 'r_spec'
-end

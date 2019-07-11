@@ -1,7 +1,4 @@
 class Basket < ApplicationRecord
-  has_many :items, dependent: :destroy
-  has_many :movies, through: :items
-
   def sub_total
     sum = 0
     self.items.each do |item|
@@ -9,4 +6,7 @@ class Basket < ApplicationRecord
     end
     return sum
   end
+
+  belongs_to :user
+  has_many :orders
 end

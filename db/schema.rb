@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_07_11_170308) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,12 +28,14 @@ ActiveRecord::Schema.define(version: 2019_07_11_170308) do
     t.integer "order_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+
   end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.integer "year"
+<<<<<<< HEAD
     t.integer "review_id"
     t.decimal "price"
     t.string "genre"
@@ -46,6 +49,8 @@ ActiveRecord::Schema.define(version: 2019_07_11_170308) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "payment"
+
+    
   end
 
   create_table "users", force: :cascade do |t|
@@ -60,4 +65,11 @@ ActiveRecord::Schema.define(version: 2019_07_11_170308) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "baskets", "users"
+  add_foreign_key "movies", "orders"
+  add_foreign_key "orders", "baskets"
+  add_foreign_key "orders", "movies"
+  add_foreign_key "orders", "users"
+  add_foreign_key "reviews", "movies"
+  add_foreign_key "reviews", "users"
 end
