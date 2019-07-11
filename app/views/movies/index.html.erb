@@ -8,14 +8,10 @@
     <strong>Price:</strong>
     <%= number_to_currency movie.price%>
     </p>
-    <%end%>
-
 
   <p>
     <%= link_to "Edit", edit_movie_path(movie) %> |
     <%= link_to "Delete", movie_path(movie), method: :delete, data: {confirm: "Are you sure?"} %>
-    <%= button_to "Add #{movie.name} to cart", items_path(:product_id => movie.id) %>
+    <%= button_to "Add #{movie.title} to basket", items_path(:movie_id => movie.id) %>
   </p>
 <% end%>
-
-<%= link_to "New movie", new_movie_path

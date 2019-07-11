@@ -12,10 +12,8 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.create(movie_params)
-    if @movie.save!
-      redirect_to movies_path
-    end
+    @movie = Movie.new(movie_params)
+    redirect_to movies_path
   end
 
   def destroy
