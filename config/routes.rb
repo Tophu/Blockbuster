@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   resources :movies
   resources :orders
 
-  get "carts/:id" => "carts#show", as: "cart"
-  delete "carts/:id" => "carts#destroy"
+  get "baskets/:id" => "baskets#show", as: "cart"
+  delete "baskets/:id" => "baskets#destroy"
 
   post "items/:id/add" => "items#add_quantity", as: "item_add"
   post "items/:id/reduce" => "items#reduce_quantity", as: "item_reduce"
