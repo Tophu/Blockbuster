@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'orders/index'
+  get 'orders/show'
+  get 'orders/new'
+  get 'basket/show'
   get "movies", to: "movies#index", as: "movies"
   get "movies/:id", to: "movies#show", as: "movie", id: /\d+/ #only numeric digits
   get "movies/new", to: "movies#new", as: "new_movie"
