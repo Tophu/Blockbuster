@@ -55,11 +55,7 @@ GEM
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-<<<<<<< HEAD
       zeitwerk (~> 2.1, >= 2.1.4)
-=======
-    arel (9.0.0)
->>>>>>> master
     autoprefixer-rails (9.6.1)
       execjs
     aw (0.1.6)
@@ -176,7 +172,7 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.9)
       pry (>= 0.10.4)
-    puma (4.0.0)
+    puma (4.0.1)
       nio4r (~> 2.0)
     r_spec (0.3.3)
       fix-expect (~> 0.3.5)
@@ -272,7 +268,6 @@ GEM
       activemodel (>= 6.0.0.a)
       bindex (>= 0.4.0)
       railties (>= 6.0.0.a)
-
     webpacker (4.0.7)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
@@ -281,7 +276,6 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
     zeitwerk (2.1.8)
-
 
 PLATFORMS
   ruby
