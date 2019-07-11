@@ -10,47 +10,52 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_11_102232) do
+ActiveRecord::Schema.define(version: 2019_07_11_113430) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "baskets", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "order_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_baskets_on_user_id"
   end
 
   create_table "movies", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.integer "year"
-    t.bigint "review_id"
     t.integer "price"
     t.string "genre"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["review_id"], name: "index_movies_on_review_id"
+    t.bigint "order_id"
+    t.index ["order_id"], name: "index_movies_on_order_id"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "content_id"
     t.string "rent_date_start"
     t.string "rent_date_end"
     t.string "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "movie_id"
+    t.bigint "user_id"
+    t.bigint "basket_id"
+    t.index ["basket_id"], name: "index_orders_on_basket_id"
     t.index ["movie_id"], name: "index_orders_on_movie_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.integer "movie_id"
+    t.bigint "movie_id"
+    t.bigint "user_id"
+    t.index ["movie_id"], name: "index_reviews_on_movie_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -65,5 +70,11 @@ ActiveRecord::Schema.define(version: 2019_07_11_102232) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "baskets", "users"
+  add_foreign_key "movies", "orders"
+  add_foreign_key "orders", "baskets"
   add_foreign_key "orders", "movies"
+  add_foreign_key "orders", "users"
+  add_foreign_key "reviews", "movies"
+  add_foreign_key "reviews", "users"
 end
