@@ -1,5 +1,4 @@
 class Movie < ApplicationRecord
-
   belongs_to :user, class_name: :Order, foreign_key: "movie_id"
 
   belongs_to :user, class_name: :Order, foreign_key: 'movie_id'

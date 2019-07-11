@@ -10,6 +10,5 @@ class CreateMovies < ActiveRecord::Migration[5.2]
 
       t.timestamps
     end
-    add_foreign_key :movies, :orders, column: :movie_id, primary_key: :id
   end
 end
