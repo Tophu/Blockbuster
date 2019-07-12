@@ -1,3 +1,45 @@
+# source 'https://rubygems.org'
+# ruby '2.5.3'
+
+# gem 'bootsnap', require: false
+# gem 'devise'
+# gem 'jbuilder', '~> 2.0'
+# gem 'pg', '~> 0.21'
+# gem 'puma'
+# gem 'rails', '~> 6.0.0.rc1'
+# gem 'redis'
+
+# gem 'autoprefixer-rails'
+# gem 'font-awesome-sass', '~> 5.6.1'
+# gem 'sassc-rails'
+# gem 'simple_form'
+# gem 'uglifier'
+# gem 'webpacker'
+
+# gem 'faker'
+# gem 'geocoder'
+# gem 'carrierwave', '~> 1.2'
+# gem 'cloudinary', '~> 1.9.1'
+# gem 'pg_search'
+# gem 'money-rails'
+# gem 'stripe'
+# # gem 'filterrific'
+# gem 'bootstrap'
+
+# group :development do
+# gem 'web-console', '>= 3.3.0'
+# end
+
+# group :development, :test do
+
+#   gem 'pry-byebug'
+#   gem 'pry-rails'
+#   gem 'listen', '~> 3.0.5'
+#   gem 'spring'
+#   gem 'spring-watcher-listen', '~> 2.0.0'
+#   gem 'dotenv-rails'
+#   gem 'r_spec'
+# end
 source 'https://rubygems.org'
 ruby '2.5.3'
 
@@ -39,8 +81,5 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
   gem 'r_spec'
-<<<<<<< HEAD
-  end
-=======
 end
->>>>>>> 49e66d0d420f8c5b95f411a2bb93f9185000ebb6
+
