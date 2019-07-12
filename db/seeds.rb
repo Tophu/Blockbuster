@@ -1,4 +1,5 @@
 
+puts "Creating movies..."
 Movie.create(title: "Star Wars",
              description: "Aliens killing each other",
              genre: "Scify",
@@ -13,3 +14,4 @@ Movie.create(title: "Avatar",
              description: "Aliens and people killing each other",
              genre: "Scify",
              price: 19.99)
+puts "done"

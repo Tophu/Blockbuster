@@ -39,4 +39,8 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
   gem 'r_spec'
+<<<<<<< HEAD
   end
+=======
+end
+>>>>>>> 49e66d0d420f8c5b95f411a2bb93f9185000ebb6
