@@ -1,15 +1,17 @@
-<h1>All Movies</h1>
+<div class="container"> 
+  <h1>All Movies</h1>
 
-<% @movies.each do |movie|%>
-<h2><%= link_to movie.title, movie_path(movie) %></h2>
-<p><%= movie.description%></p>
-<p><%= movie.genre%></p>
-<p>
-    <strong>Price:</strong>
-    <%= number_to_currency movie.price%>
-    </p>
-
+  <% @movies.each do |movie|%>
+  <h2><%= link_to movie.title, movie_path(movie) %></h2>
+  <p><%= movie.description%></p>
+  <p><%= movie.genre%></p>
   <p>
-    <%= button_to "Add #{movie.title} to basket", items_path(:movie_id => movie.id) %>
-  </p>
-<% end%>
+      <strong>Price:</strong>
+      <%= number_to_currency movie.price%>
+      </p>
+
+    <p>
+      <%= button_to "Add #{movie.title} to basket", items_path(:movie_id => movie.id) %>
+    </p>
+  <% end%>
+</div>
