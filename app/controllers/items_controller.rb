@@ -7,17 +7,17 @@ class ItemsController < ApplicationController
       @item = current_basket.items.find_by(:movies_id => chosen_movie)
       @item.quantity += 1
     else
-      @item = LineItem.new
+      @item = Item.new
       @item.basket = current_basket
       @item.movie = chosen_movie
     end
 
     @item.save
-    redirect_to basket_path(current_basket)
+    redirect_to movies_path
   end
 
   def destroy
-    @item = LineItem.find(params[:id])
+    @item = Item.find(params[:id])
     @item.destroy
     redirect_to basket_path(@current_basket)
   end

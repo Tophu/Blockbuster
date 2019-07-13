@@ -6,6 +6,6 @@ class BasketsController < ApplicationController
   def destroy
     @basket = @current_basket
     @basket.destroy
-    redirect_to movies_path
+    redirect_to root_path
   end
 end
