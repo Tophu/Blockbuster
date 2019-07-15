@@ -1,0 +1,13 @@
+.container {
+  padding: 100px 10px;
+  display: flex;
+  justify-content: center;
+  .sign-up-form {
+    width: 500px;
+    .sign-up-card {
+      border: solid gray 1px;
+      border-radius: 4px;
+      padding: 30px;
+    }
+  }
+}
