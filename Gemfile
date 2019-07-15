@@ -33,6 +33,7 @@ end
 group :development, :test do
 
   gem 'pry-byebug'
+  gem 'yeet_dba'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
   gem 'spring'

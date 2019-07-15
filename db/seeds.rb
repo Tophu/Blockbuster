@@ -1,4 +1,3 @@
-
 puts "Creating movies..."
 Movie.create(title: "Star Wars",
              description: "Aliens killing each other",

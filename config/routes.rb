@@ -5,16 +5,19 @@ Rails.application.routes.draw do
   # get "movies/new", to: "movies#new", as: "new_movie"
   # get "movies/create"
   resources :movies
-  resources :orders
+  resources :orders do
+    resources :items
+  end
+  resources :baskets, only: [:show, :update, :destroy]
 
-  get "baskets/:id" => "baskets#show", as: "basket"
-  delete "baskets/:id" => "baskets#destroy"
+  # get "baskets/:id" => "baskets#show", as: "basket"
+  # delete "baskets/#" => "baskets#destroy"
 
-  post "items/:id/add" => "items#add_quantity", as: "item_add"
-  post "items/:id/reduce" => "items#reduce_quantity", as: "item_reduce"
-  post "items" => "items#create"
-  get "items/:id" => "items#show", as: "item"
-  delete "items/:id" => "items#destroy"
+  # post "items/:id/add" => "items#add_quantity", as: "item_add"
+  # post "items/:id/reduce" => "items#reduce_quantity", as: "item_reduce"
+  # post "items" => "items#create"
+  # get "items/:id" => "items#show", as: "item"
+  # delete "items/:id" => "items#destroy"
 
   devise_for :users
 
