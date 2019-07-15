@@ -275,6 +275,10 @@ GEM
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
+    yeet_dba (1.0.0)
+      actionpack (>= 3.0, < 6.0)
+      activerecord (>= 3.0, < 6.0)
+      railties (>= 3.0, < 6.0)
     zeitwerk (2.1.8)
 
 PLATFORMS
@@ -310,6 +314,7 @@ DEPENDENCIES
   uglifier
   web-console (>= 3.3.0)
   webpacker
+  yeet_dba
 
 RUBY VERSION
    ruby 2.5.3p105
