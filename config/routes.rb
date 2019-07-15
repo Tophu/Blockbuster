@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   # get "movies/create"
   resources :movies
   resources :orders
+  resources :baskets
 
-  get "baskets/:id" => "baskets#show", as: "basket"
-  delete "baskets/:id" => "baskets#destroy"
+  # get "baskets/:id" => "baskets#show", as: "basket"
+  # delete "baskets/:id" => "baskets#destroy"
 
   post "items/:id/add" => "items#add_quantity", as: "item_add"
   post "items/:id/reduce" => "items#reduce_quantity", as: "item_reduce"

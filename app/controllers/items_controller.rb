@@ -10,10 +10,9 @@ class ItemsController < ApplicationController
       @item = Item.new
       @item.basket = current_basket
       @item.movie = chosen_movie
+      @item.save
+      redirect_to basket_path(current_basket)
     end
-
-    @item.save
-    redirect_to movies_path
   end
 
   def destroy
@@ -26,5 +25,21 @@ class ItemsController < ApplicationController
 
   def item_params
     params.require(:item).permit(:quantity, :movie_id, :basket_id)
+  end
+
+  def add_quantity
+    @item = Item.find(params[:id])
+    @item.quantity += 1
+    @item.save
+    redirect_to basket_path(@current_basket)
+  end
+
+  def reduce_quantity
+    @item = Item.find(params[:id])
+    if @item.quantity > 1
+      @item.quantity -= 1
+    end
+    @item.save
+    redirect_to basket_path(@current_basket)
   end
 end
