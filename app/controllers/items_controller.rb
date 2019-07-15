@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
     chosen_movie = Movie.find(params[:movie_id])
     current_basket = @current_basket
     if current_basket.movies.include?(chosen_movie)
+
       @item = current_basket.items.find_by(:movies_id => chosen_movie)
       @item.quantity += 1
     else
