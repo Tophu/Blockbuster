@@ -1,12 +1,13 @@
-.navbar-lewagon {
+.navbar-blockbuster {
   justify-content: space-between;
   background: white;
+  padding: 4px 20px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-blockbuster .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-blockbuster .navbar-brand img {
+  width: 100px;
 }

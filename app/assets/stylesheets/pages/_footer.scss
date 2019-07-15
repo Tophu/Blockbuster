@@ -1,6 +1,14 @@
 .footer-container {
+  display: grid;
+  padding: 50px;
+  height: 350px;
   background: rgb(28, 56, 94);
+  color: rgb(255, 192, 74);
+  // color: white;
   ul {
     list-style: none;
+    a {
+      color: rgb(255, 192, 74);
+    }
   }
 }
