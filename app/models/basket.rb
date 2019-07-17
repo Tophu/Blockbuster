@@ -4,6 +4,8 @@ class Basket < ApplicationRecord
   has_many :movies, through: :items
   belongs_to :user
 
+  validates :movie_id, :basket_id, :order_id, presence: true, numericality: true, uniqueness: true
+
   def sub_total
     sum = 0
     self.items.each do |item|

@@ -5,4 +5,5 @@ class Order < ApplicationRecord
 
   validates :rent_start_date, presence: true
   validates :rent_end_date, presence: true
+  validates :movie_id, :basket_id, presence: true, numericality: true, uniqueness: true
 end
