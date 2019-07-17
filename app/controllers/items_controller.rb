@@ -11,7 +11,6 @@ class ItemsController < ApplicationController
       @item.movie = chosen_movie
     end
     @item.save
-    # binding.pry
     redirect_to basket_path
   end
 
