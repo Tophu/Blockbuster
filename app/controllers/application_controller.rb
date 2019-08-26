@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
         session[:basket_id] = nil
       end
     end
-
     if session[:basket_id] == nil
       @current_basket = Basket.new
       session[:basket_id] = @current_basket.id

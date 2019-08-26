@@ -12,7 +12,7 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.create.request.params(movie_params)
+    @movie = Movie.create
     redirect_to movies_path
   end
 
