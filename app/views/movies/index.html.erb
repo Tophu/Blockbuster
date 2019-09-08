@@ -7,6 +7,6 @@
   <p><%= movie.genre%></p>
   <p>
     <%= button_to "Add #{movie.title} to basket", movies_path(:movie_id => movie.id) %>
-    <%= link_to 'Basket', basket_url(basket.id)%>
+  </p>
 <% end%>
 
