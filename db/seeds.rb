@@ -1,7 +1,7 @@
 puts "Creating movies..."
 Movie.create(title: "Star Wars",
              description: "Aliens killing each other",
-             genre: "Scify",
+             genre: "Sci-Fi",
              price: 9.99)
 
 Movie.create(title: "Apocalipsys Now",
@@ -11,6 +11,6 @@ Movie.create(title: "Apocalipsys Now",
 
 Movie.create(title: "Avatar",
              description: "Aliens and people killing each other",
-             genre: "Scify",
+             genre: "Sci-Fi",
              price: 19.99)
 puts "done"
